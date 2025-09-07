@@ -69,12 +69,7 @@ function App() {
                   </RedirectAuthenticatedUser>
                 }
               />
-              <Route
-                path="/items"
-                element={
-                  <ItemsPage />
-                }
-              />
+              <Route path="/items" element={<ItemsPage />} />
 
               <Route
                 path="/cart"
@@ -84,6 +79,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route path="*" element={<Navigate to="/items" replace />} />
             </Routes>
           </main>
           <Footer />
