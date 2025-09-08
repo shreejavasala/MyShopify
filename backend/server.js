@@ -30,8 +30,15 @@ app.use("/api/auth", authRouter);
 app.use("/api/items", itemRouter);
 app.use("/api/cart", cartRouter);
 
-app.listen(PORT, async () => {
-  await connectDB();
-  console.log(`Starting the server...`);
-  console.log(`Server is running on PORT: http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(PORT, () => {
+      console.log(`Server running on PORT: ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Failed to start server:", error);
+  }
+};
+
+startServer();
