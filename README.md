@@ -48,7 +48,7 @@ myShopify/
 │   ├── config/
 │   │   ├── allowedOrigins.js
 │   │   └── dbConn.js
-    ├── controllers/
+│   ├── controllers/
 │   │   ├── auth.controller.js
 │   │   ├── item.controller.js
 │   │   └── cart.controller.js
@@ -60,7 +60,7 @@ myShopify/
 │   │   ├── auth.route.js
 │   │   ├── item.route.js
 │   │   └── cart.route.js
-|   ├── .env
+│   ├── .env
 │   ├── server.js
 │   └── package.json
 │   └── vercel.json
